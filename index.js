@@ -70,7 +70,7 @@ function addStudent(name, id) {
 
 addStudent("John", "105");
 
-//2. Enter mark fot a student
+//2. Enter mark for a student
 let marksOfJohn = [
   { subject: "English", mark: 49 },
   { subject: "Maths", mark: 48 },
@@ -142,6 +142,7 @@ function deleteSubject(subjectName) {
   }
 }
 deleteSubject("Chemistry");
+console.log(classObj);
 
 //8. Find the topper of a class given a subject
 function topper(subject) {
@@ -188,10 +189,20 @@ function sortedStudents() {
 }
 
 sortedStudents();
+// console.log(classObj);
+
+// extra things - total mark for a student and save it in the user object
+function totalMarks(id) {
+  let totalMark = 0;
+  for (let i = 0; i < classObj.students.length; i++) {
+    if (classObj.students[i].id === id) {
+    for (let j = 0; j < classObj.students[i].marks.length; j++) {
+        totalMark += classObj.students[i].marks[j].mark;
+      }
+      classObj.students[i].total = totalMark;
+    }
+  }
+  console.log(totalMark);
+}
+totalMarks("104");
 console.log(classObj);
-
-//extra things - total mark for a student and save it in the user object
-// let binuSumMarks = 0;
-// function binuTotalMarks(id){
-
-// }
