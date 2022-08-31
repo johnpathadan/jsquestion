@@ -50,7 +50,7 @@ let classObj = {
 };
 
 let user = {};
-//function to add new user
+//function to add new user to the user object
 function studentUser(name, email, age, phoneNumber) {
   (user.name = name),
     (user.email = email),
@@ -196,7 +196,7 @@ function totalMarks(id) {
   let totalMark = 0;
   for (let i = 0; i < classObj.students.length; i++) {
     if (classObj.students[i].id === id) {
-    for (let j = 0; j < classObj.students[i].marks.length; j++) {
+      for (let j = 0; j < classObj.students[i].marks.length; j++) {
         totalMark += classObj.students[i].marks[j].mark;
       }
       classObj.students[i].total = totalMark;
