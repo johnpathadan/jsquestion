@@ -50,7 +50,7 @@ let classObj = {
 };
 
 let user = {};
-//function to add new user to the user object
+//function to add new user to the user object, pushed to user object
 function studentUser(name, email, age, phoneNumber) {
   (user.name = name),
     (user.email = email),
