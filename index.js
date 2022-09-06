@@ -206,3 +206,5 @@ function totalMarks(id) {
 }
 totalMarks("104");
 console.log(classObj);
+
+//ends
