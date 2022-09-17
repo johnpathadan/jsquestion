@@ -208,3 +208,20 @@ totalMarks("104");
 console.log(classObj);
 
 //ends
+
+//comments
+// extra things - total mark for a student and save it in the user object
+function totalMarks(id) {
+  let totalMark = 0;
+  for (let i = 0; i < classObj.students.length; i++) {
+    if (classObj.students[i].id === id) {
+      for (let j = 0; j < classObj.students[i].marks.length; j++) {
+        totalMark += classObj.students[i].marks[j].mark;
+      }
+      classObj.students[i].total = totalMark;
+    }
+  }
+  console.log(totalMark);
+}
+totalMarks("104");
+console.log(classObj);
