@@ -225,3 +225,17 @@ function totalMarks(id) {
 }
 totalMarks("104");
 console.log(classObj);
+
+let justAnumber = 0;
+
+let array1 = [1, 2, 3];
+let array2 = [];
+function getArray(array1, array2) {
+  if (justAnumber === 1) {
+    array2 = [...array1];
+  } else {
+    array2.push(array1[0], array1[2], array1[1]);
+  }
+  return array2;
+}
+console.log(getArray(array1, array2));
